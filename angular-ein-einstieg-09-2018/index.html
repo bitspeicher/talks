@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown>
+            <textarea data-template>
+                Zwei Teile
+                ----
+                1. Nicht technischer Teil (Überblickswissen, für alle!)
+                    1. Typescript **(3')**
+                    1. Angular (Salesmen) **(5')**
+                    1. Angular (Technische Architektur) **(10')**
+                    1. Zur Schulung **(2')**
+                1. Technischer Teil (Doing, für Programmierer!)
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                TypeScript (TS) vs. JavaScript (JS)
+                ----
+                * Übermenge von JS. Das heißt: Jedes JS ist valides TS!
+                * ES ist der Vertrag/Standard zu JS. Es sei JS==ES5.
+                * Zur Compilezeit wird TS in JS transformiert.
+                * Neues: Klassen, Interfaces, **Typen**, Pfeilfunktionen, var/let/const, ...
+                * Hoffnung: ES schluckt TS, das heißt TS wird obsolet und IE stirbt.
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Warum TypeScript > JavaScript?
+                ----
+                * Typsicherheit - wenn man will (weniger runtime errors)
+                * Lesbarer und wartbarer ergo sauberer.
+                * Gut strukturierbar.
+                * OOP (implements, extends)
+
+                Mit TS lassen sich Projekte gut in Teams umsetzen und bleiben es dann auch.
+
+                http://www.typescriptlang.org/play/index.html
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                AngularJS vs Angular (NG)
+                ----
+                * Früher AngularJS (1.x) - Ein **Framework** für Webanwendungen von Google. FOSS seit 2009
+                * Jetzt Angular (>=2) - Eine **Plattform** für Web-, Desktop- und Mobilanwendungen
+                * Angular ist Nachfolger von AngularJS und von Grund auf neu.
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Angular - Einordnung (Web-Sicht)
+                ----
+                * Backend Tier: DB-Server
+                * Middleware Tier: Transformiert DB-Results in **etwas**
+                * Frontend Tier: Transformiert **etwas** in HTML
+
+
+                Und Angular befindet sich im Frontend Tier,
+                * nimmt oft JSON an und baut daraus HTML,
+                * macht dies auch auf dem Client und
+                * kommuniziert wieder zurück an die Middleware.
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Angular USPs
+                ----
+                * Kein Framework sondern Plattform
+                * Kernkompetenzen:
+                    * modular (components)
+                    * sehr gut testbar und damit
+                    * starker Fokus auf Wartbarkeit
+                    * läuft im Browser, auf dem Desktop, auf dem Telefon
+                    * hält den Entwickler davon ab, Fehler zu machen
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Wer hat den Vorteil schon erkannt?
+                ----
+                * The Guardian
+                * PayPal
+                * Netflix
+                * Julian
+                * iStock
+            </textarea>
+        </section>
+
+        <section>
+            <h2>Angular Architektur 1</h2>
+            <img src="arch.png"/>
+        </section>
+
+        <section>
+            <h2>Angular Architektur 2</h2>
+            <div style="float:left;">
+                <img src="file_struct.png"/>
+            </div>
+            <div style="float:left;text-align: left;padding-left: 50px">
+                weiß: Modul <br/>
+                rot: Komponente <br/>
+                blau: Template <br/>
+                grün: Styles <br/>&nbsp;&nbsp;&nbsp;&nbsp;- dazu später Großartiges! <br/>
+                rosa: <strong>Tests</strong><br/>
+            </div>
+        </section>
+
+        <section>
+            <h2>Architektur 3</h2>
+            <img src="output.png"/>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Aufgaben, Herausforderungen, Möglichkeiten
+                ----
+                * Jedes neue Projekt auf Umsetzung mit Angular hin prüfen.
+                * Design (UX/UI): Im Raum von Apps und Komponenten denken. Das erfordert neue Herangehensweisen.
+                * Testen kostet nicht, Testen erlöst!
+                * Styling neu und richtig denken!
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Last and least - die Schulung
+                ----
+                * ging drei Tage
+                * sehr Intensiv
+                * eher tief als breit
+                * Verantstalter: https://workshops.de/
+                * Lehrer: Timo Korinth - hier ein Link zu seinem Wordpress-Blog: http://timokorinth.de/
+                * interessanter Ort: https://www.unperfekthaus.de/
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Flieht solange ihr könnt!
+                ----
+                mit einem Zitat von Henry Ford:
+
+                > Wer immer tut, was er schon kann, bleibt immer das, was er schon ist.
+            </textarea>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                Quick Start
+                ----
+                1. `npm i -g @angular/cli@latest` 😜
+                1. `ng new demo --style 'scss' -d` (DryRun)
+                1. `ng new demo --style 'scss'` (Really)
+                1. `cd demo && ng serve`
+                1. Prefix entfernen!
+                1. `ng g c info-box -d` (DryRun)
+                1. `ng g c info-box` (Really)
+            </textarea>
+        </section>
+
+        <section>
+            Bildquellen:
+            <ul>
+                <li>https://www.ngdevelop.tech/angular/architecture/</li>
+                <li>https://www.istockphoto.com/de/optionen-und-preise</li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+    transition: 'none',
+    math: {
+      mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+      config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+    },
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/math/math.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+</script>
+</body>
+</html>
